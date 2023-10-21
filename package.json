@@ -1,0 +1,19 @@
+{
+  "name": "drag-n-drop-project",
+  "version": "1.0.0",
+  "description": "Drag and Drop Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "keywords": [
+    "typescript",
+    "course"
+  ],
+  "author": "Mirko Basic",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
