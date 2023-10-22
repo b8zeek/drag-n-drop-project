@@ -1,19 +1,28 @@
 {
-  "name": "drag-n-drop-project",
-  "version": "1.0.0",
-  "description": "Drag and Drop Project",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "lite-server"
-  },
-  "keywords": [
-    "typescript",
-    "course"
-  ],
-  "author": "Mirko Basic",
-  "license": "ISC",
-  "devDependencies": {
-    "lite-server": "^2.5.4"
-  }
+    "name": "drag-n-drop-project",
+    "version": "1.0.0",
+    "description": "Drag and Drop Project",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "lite-server",
+        "build": "webpack"
+    },
+    "keywords": [
+        "typescript",
+        "course"
+    ],
+    "author": "Mirko Basic",
+    "license": "ISC",
+    "devDependencies": {
+        "ts-loader": "^9.5.0",
+        "typescript": "^5.2.2",
+        "webpack": "^5.89.0",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
+    },
+    "dependencies": {
+        "lite-server": "^2.6.1",
+        "prettier": "^3.0.3"
+    }
 }

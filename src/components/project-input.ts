@@ -1,7 +1,7 @@
-import { Component } from "./base-component.js"
-import { Autobind } from "../decorators/autobind.js"
-import { projectState } from "../state/project.js"
-import { Validatable, validate } from "../util/validation.js"
+import { Component } from './base-component'
+import { Autobind } from '../decorators/autobind'
+import { projectState } from '../state/project'
+import { Validatable, validate } from '../util/validation'
 
 export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
     titleInputElement: HTMLInputElement
@@ -9,17 +9,17 @@ export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
     peopleInputElement: HTMLInputElement
 
     constructor() {
-        super("project-input", "app", true, "user-input")
+        super('project-input', 'app', true, 'user-input')
 
-        this.titleInputElement = this.element.querySelector("#title") as HTMLInputElement
-        this.descriptionInputElement = this.element.querySelector("#description") as HTMLInputElement
-        this.peopleInputElement = this.element.querySelector("#people") as HTMLInputElement
+        this.titleInputElement = this.element.querySelector('#title') as HTMLInputElement
+        this.descriptionInputElement = this.element.querySelector('#description') as HTMLInputElement
+        this.peopleInputElement = this.element.querySelector('#people') as HTMLInputElement
 
         this.configure()
     }
 
     configure() {
-        this.element.addEventListener("submit", this.submitHandler)
+        this.element.addEventListener('submit', this.submitHandler)
     }
 
     renderContent(): void {}
@@ -48,7 +48,7 @@ export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
         }
 
         if (!validate(titleValidatable) || !validate(descriptionValidatable) || !validate(peopleValidatable)) {
-            alert("Invalid input, please try again!")
+            alert('Invalid input, please try again!')
             return
         } else {
             return [enteredTitle, enteredDescription, +enteredPeople]
@@ -56,9 +56,9 @@ export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
     }
 
     private clearInputs() {
-        this.titleInputElement.value = ""
-        this.descriptionInputElement.value = ""
-        this.peopleInputElement.value = ""
+        this.titleInputElement.value = ''
+        this.descriptionInputElement.value = ''
+        this.peopleInputElement.value = ''
     }
 
     @Autobind
